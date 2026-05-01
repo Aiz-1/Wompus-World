@@ -131,7 +131,7 @@ No Stench → ¬W1 ∧ ¬W2 ∧ ...
 <div class="box">
   <h2>Author</h2>
   <p>
-    Muhammad Faizan<br>
+    Aiz Ali<br>
     BS Computer Science
   </p>
 </div>
@@ -168,6 +168,5 @@ It uses percepts like breeze and stench to infer safe paths and avoid danger.
 </ul>
 
 <p>
-Author: Muhammad Faizan (BS Computer Science)
+Author: Aiz Ali (BS Computer Science)
 </p>
->>>>>>> 56b8ebb (Final ReadMe)
