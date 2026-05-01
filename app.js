@@ -237,13 +237,22 @@ function step() {
 }
 
 function toggleAuto() {
+  const btn = document.getElementById('autoBtn');
   if (autoInterval) {
     clearInterval(autoInterval); autoInterval = null;
-    document.getElementById('autoBtn').textContent = 'Auto';
+    btn.textContent = 'Auto';
+    btn.removeAttribute('data-running');
   } else {
-    document.getElementById('autoBtn').textContent = 'Stop';
+    btn.textContent = 'Stop';
+    btn.setAttribute('data-running', 'true');
     autoInterval = setInterval(() => {
-      if (gameOver) { clearInterval(autoInterval); return; }
+      if (gameOver) {
+        clearInterval(autoInterval);
+        autoInterval = null;
+        btn.textContent = 'Auto';
+        btn.removeAttribute('data-running');
+        return;
+      }
       step();
     }, 600);
   }
